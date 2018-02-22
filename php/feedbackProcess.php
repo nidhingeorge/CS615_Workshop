@@ -1,12 +1,13 @@
 <?php
 // PHP code goes here
-echo "Hello from PHP!"
-  
-  if (isset($_POST['submit'])) {
+ 
+
+
+if (isset($_POST['submit'])) {
 // form data processing goes here
 } else {
  // nothing happened -- go back to feedback form
- header("Location: ../index.html");
+ header("Location: ../index.php");
 
 }
 
@@ -17,7 +18,7 @@ $module = $_POST['module'];
  $rating = $_POST['rating'];
 } else {
  // nothing happened -- go back to feedback form
- header("Location: ../index.html");
+ header("Location: ../index.php");
 }
 
 if (isset($_POST['submit'])) {
@@ -39,19 +40,12 @@ load Feedbacks.xml.");
  $feedback->addChild('rating', $rating);
 // save the whole modified XML
  $xml->asXml('./data/feedbacks.xml');
-} else {
- // nothing happened -- go back to feedback form
- header("Location: ../index.html");
-}
-
-if (isset($_POST['submit'])) {
-...
-// save the whole modified XML
- $xml->asXml('./data/feedbacks.xml');
 // Display thank you
  header("Location: ../thankyou.html");
 } else {
  // nothing happened -- go back to feedback form
- header("Location: ../index.html");
+ header("Location: ../index.php");
 }
+
+
 ?>

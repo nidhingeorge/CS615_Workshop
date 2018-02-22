@@ -18,7 +18,7 @@
   </div>
 
   <div class="container">
-    <form method="post" action="php/feedbackProcessor.php">
+    <form method="post" action="php/feedbackProcess.php">
 
       <div class="form-group">
         <label for="module">Module: </label>
@@ -66,5 +66,8 @@ value="5">:))</label>
   </div>
 
 </body>
+  <?php
+  ini_set('display_errors', 1);
+  ?>
 
 </html>
